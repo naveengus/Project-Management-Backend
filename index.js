@@ -1,30 +1,23 @@
+// index.js
 import express from "express";
-import "dotenv/config";
 import cors from "cors";
-import Routes from "./routes/index.js";
-import mongoose from "mongoose";
+import Routes from "./routes/index.js"; // Ensure this is correctly set up
+import connectDB from "./config/db.js"; // Import the connection function
 
-const PORT = process.env.PORT || 8000;
 const app = express();
+const PORT = process.env.PORT || 8000;
 
-mongoose
-  .connect(process.env.MONGODB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("Connected to MongoDB Atlas"))
-  .catch((err) => console.error("Error connecting to MongoDB:", err));
+// Connect to MongoDB
+connectDB();
 
-app.use(
-  cors({
-    origin: "https://your-netlify-deployment-url.netlify.app", // Add your Netlify URL here
-    methods: "GET, POST, PUT, DELETE",
-    allowedHeaders: "Content-Type, Authorization",
-  })
-);
-
+// Middleware
+app.use(cors());
 app.use(express.json());
 
+// Routes
 app.use(Routes);
 
-app.listen(PORT, () => console.log(`Server running at port ${PORT}`));
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
