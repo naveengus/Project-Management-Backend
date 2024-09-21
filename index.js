@@ -1,9 +1,9 @@
 // index.js
 import express from "express";
 import cors from "cors";
+import "dotenv/config.js";
 import Routes from "./routes/index.js"; // Ensure this is correctly set up
 import connectDB from "./config/db.js"; // Import the connection function
-
 const app = express();
 const PORT = process.env.PORT || 8000;
 
