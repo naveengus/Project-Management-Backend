@@ -36,27 +36,3 @@ const UserProjectSchema = new mongoose.Schema(
 const UserprojectModel = new mongoose.model("Userprojects", UserProjectSchema);
 
 export default UserprojectModel;
-
-// submittedAt: { type: Date, default: Date.now },
-
-// const mongoose = require("mongoose");
-// const { Schema } = mongoose;
-
-// const ProjectSubmissionSchema = new Schema(
-//   {
-//     projectId: { type: Schema.Types.ObjectId, ref: "Project", required: true }, // Reference to the project
-//     userId: { type: Schema.Types.ObjectId, ref: "User", required: true }, // Reference to the user submitting
-//     submissionDetails: { type: String, required: true }, // Progress or report submitted by the user
-//     submittedAt: { type: Date, default: Date.now }, // Automatically adds the submission time
-//     status: { type: String, default: "Pending" }, // Status of the submission (Pending, Approved, etc.)
-//   },
-//   {
-//     timestamps: true, // Automatically add createdAt and updatedAt fields
-//   }
-// );
-
-// const ProjectSubmission = mongoose.model(
-//   "ProjectSubmission",
-//   ProjectSubmissionSchema
-// );
-// module.exports = ProjectSubmission;
