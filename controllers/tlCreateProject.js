@@ -146,7 +146,9 @@ const getAllApprovedProject = async (req, res) => {
 
 const getProjectById = async (req, res) => {
   try {
-    let project = await TlprojectModel.findById(req.params.projectId);
+    let project = await TlprojectModel.findOne({
+      projectId: req.params.projectId,
+    });
     if (project) {
       res.status(200).send({
         message: "Project fetched successfully",
