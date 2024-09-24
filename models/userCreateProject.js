@@ -26,6 +26,7 @@ const UserProjectSchema = new mongoose.Schema(
       },
       default: "Pending",
     },
+    ProjectLink: [{ type: String }],
   },
   {
     collection: "Userprojects",
