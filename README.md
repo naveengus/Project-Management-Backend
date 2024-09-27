@@ -25,13 +25,10 @@ This is the backend for the **Project Management Tool** built using **Node.js** 
 - **Authentication**: Secure user registration and login using JWT.
 - **Middleware**: Protect routes using authentication middleware to ensure only authorized users can access certain endpoints.
 
-### Folder Structure
-
 ### Middleware
-
 ## Authentication Middleware
-
-    Protects routes by verifying JWT tokens to ensure that only authenticated users can access certain API endpoints.
+ - Protects routes by verifying JWT tokens to ensure that only authenticated users can access certain API endpoints.
+    
 
 ### Technologies Used
 
