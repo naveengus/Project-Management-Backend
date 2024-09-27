@@ -127,7 +127,6 @@ const getAllApprovedUser = async (req, res) => {
           submissionDetails: 1,
           description: 1,
           ProjectLink: 1,
-
           name: {
             $concat: ["$user_details.firstName", " ", "$user_details.lastName"],
           },
