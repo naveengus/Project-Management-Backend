@@ -34,6 +34,8 @@ const usersSchema = new mongoose.Schema(
         message: "{VALUE} is not supported",
       },
     },
+    resetPasswordOtp: { type: Number },
+    resetPasswordExpires: { type: Date },
   },
   {
     collection: "users",

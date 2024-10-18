@@ -7,5 +7,7 @@ const router = express.Router();
 router.get("/getAllUsers", verify, usersController.getAllUsers);
 router.post("/login", usersController.login);
 router.post("/signup", usersController.signup);
+router.post("/forgotPassword", usersController.forgotPassword);
+router.post("/resetPassword", usersController.resetPassword);
 
 export default router;
