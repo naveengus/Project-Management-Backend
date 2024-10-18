@@ -1,6 +1,7 @@
 import userModel from "../models/users.js";
 import auth from "../common/auth.js";
 import { randString } from "../common/helper.js";
+import nodemailer from "nodemailer";
 
 const getAllUsers = async (req, res) => {
   try {
